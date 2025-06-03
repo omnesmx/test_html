@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    background: repeating-radial-gradient(circle at center, #ff00ff, #00ffff 20%, #ffff00 40%, #ff00ff 60%);
+    animation: psychedelic 10s linear infinite;
+    color: #fff;
+}
+
+@keyframes psychedelic {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+}
+
+#board-container {
+    position: relative;
+    display: inline-block;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.cell.x {
+    color: red;
+}
+
+.cell.o {
+    color: blue;
+}
+
+.cell.disabled {
+    background-color: #eee;
+    cursor: default;
+}
+
+#win-line {
+    position: absolute;
+    height: 5px;
+    background: green;
+    top: 0;
+    left: 0;
+    display: none;
+    transform-origin: 0 0;
+    pointer-events: none;
+}
+
+#message {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
