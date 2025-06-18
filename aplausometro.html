@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplausómetro</title>
+    <link rel="stylesheet" href="aplausometro.css">
+</head>
+<body>
+    <h1>Aplausómetro</h1>
+
+    <input type="file" id="photoInput" accept="image/*">
+    <div id="photoContainer"></div>
+
+    <div id="meterContainer">
+        <label for="meter">Nivel de aplausos:</label>
+        <progress id="meter" value="50" max="100"></progress>
+        <span id="meterValue">50</span>
+    </div>
+
+    <script src="aplausometro.js"></script>
+</body>
+</html>
